@@ -1,6 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
-using ConsoleApp;
+﻿var directories = (
+    Backend: Tuple.Create(
+        Tuple.Create(Tuple.Create("C#", "Java", "Python"))
+    ),
+    Frontend: Tuple.Create(
+        Tuple.Create(Tuple.Create("Flutter", "Android/IOS UI", "Frontend(Web)"))
+    )
+);
 
-UserHome userHome = new UserHome();
-userHome.userHomeFillUp();
-userHome.userHomeShow();
+Console.WriteLine(directories.Backend.Item1.Item1.Item1);
